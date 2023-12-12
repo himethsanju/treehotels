@@ -1,0 +1,1229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* detailing for all in common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body */
+body{
+    background-color: rgb(225, 221, 221);
+}
+
+/* header */
+nav{
+    background-color: rgba(225, 221, 221, 0.807);
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    padding-left: 30px;
+}
+
+/* navbar details */
+nav a{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 550;
+}
+
+nav a:hover, 
+nav a.active{
+    color: #ff5900;
+    transition: -1s;
+}
+
+/* social media logo */
+.social-media{
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    transition: -5s;
+}
+
+.social-media a:hover{
+    border-color: #ff5900;
+}
+
+.social-media a i{
+    font-size: 24px;
+    color: #ff5900;
+    transform: rotate(-45deg);
+}
+/*
+/* home */
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 0 8% 0 8%;
+    padding-top: 17vh;
+}
+
+/* home button */
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: black;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,-1);
+    font-size: 16px;
+    color: #ffffffcc;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .4s;
+} 
+
+/* home button hover effect */
+.btn:hover{
+    background: #ff6a00;
+    color:#000000;
+
+} 
+
+
+.book{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 0;
+}
+
+/* Booking page */
+.bookcontainer{
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    padding: 8%;
+}
+
+.bookpg-content h1{
+    color: #000;
+    font-size: 50px;
+    text-shadow: 0 0 5px #bab8b8;
+}
+
+.bookpg-content p{
+    color: #000;
+    font-size: 17px;
+    margin-top: 2%;
+    text-shadow: 0 0 5px #bab8b8;
+}
+
+
+/* footer */
+footer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: #000000;
+    height: 50vh;
+    width: 100%;
+}
+.footer-content{
+    max-width: 20%;
+    margin-left: 10%;
+    line-height: 1.7;
+}
+
+.footer-content2{
+    max-width: 20%;
+    margin-left: 50%;
+    line-height: 1.7;
+}
+.footer-content h6{
+    font-size: 16px;
+    margin-bottom: 8%;
+    color:#ffffff;
+}
+
+.footer-content p{
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 15%;
+}
+.footer-content ul{
+    list-style: none;
+}
+.footer-content li{
+    color:#ffffff;
+    font-size: 14px;
+}
+/* footer image */
+.footerimg{
+    width: 100px;
+    height: 100px;
+    margin-left: 6%;
+    background-image: url('pictures/OIP-removebg-preview.png');
+    background-size: cover;
+}
+
+/* media queries for home page */
+@media(max-width: 500px){
+    .table-container thead{
+        display: none;
+    }
+
+    .table-container, .table-container tbody, .table-container tr, .table-container td{
+        display: block;
+        width: 100%;
+    }
+    .table-container tr{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .table-container td{
+        font-size: 16px;
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+
+    .table-container td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0%;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* media queiries */
+@media (max-width: 1024px) {
+    /* navbar */
+    nav a{
+        font-size: 16px;
+        font-weight: 550;
+    }
+
+    nav{
+        height: 17vh;
+    }
+
+    /* home page */
+    .ammo h1{
+        font-size: 60px;
+    }
+    
+    .ammo h3{
+        font-size: 40px;
+    }
+    
+    .home-content img{
+        width: 50%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .home-content{
+        flex-direction: column;
+    }
+
+    .ammo p{
+        font-size: 18px;
+    }
+
+    .restaurant-content{
+        flex-direction: column;
+    }
+
+    .restaurant img{
+        width: 70%;
+        height: auto;
+    }
+    
+
+    /* restaurant row */
+    .restaurantammo h3{
+        font-size: 30px;
+    }
+    
+    .restaurantammo p{
+    
+        font-size: 17px;
+    }
+
+    /* hotel-branch */
+    .branch-content h5{
+        margin-top: 1%;
+        font-size: 35px;
+    }  
+
+    .branch-content p{
+        font-size: 17px;
+    }
+    
+
+    /* hotel-restaurant */
+    .restaurantpg-content h5{
+        margin-top: 1%;
+        font-size: 35px;
+    }  
+
+    .restaurantpg-content p{
+        font-size: 17px;
+    }
+
+    .restaurantcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurantcontent p{
+        font-size: 17px;
+    }
+
+    .restauranttypes h2{
+        font-size: 30px;
+    }
+    
+    .restaurantcontent img{
+        width: 80%;
+        height: auto;
+    }
+
+    .eventpagescontent{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .eventcontent1{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 8%;
+    }
+
+    .eventpage1 h2{
+        font-size: 22px;
+    }
+
+    .eventpages p{
+        font-size: 16px;
+    }
+    .eventpagescontent p{
+        font-size: 16px;
+    }
+
+    .eventbtn{
+        font-size: 14px;
+    }
+
+    /* hotel-adventures */
+    .adventures-content h5{
+        margin-top: 4%;
+        font-size: 35px;
+    }  
+
+    .adventures-content p{
+        font-size: 17px;
+    }
+
+    /* footer */
+    footer{
+        height: 40vh;
+    }
+
+    .footer-content h6{
+        font-size: 14px;
+        color:#ffffff;
+    }
+    
+    .footer-content p{
+        font-size: 11px;
+    }
+
+    .event{
+        margin-bottom: 2%;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    /* navbar */
+    nav a{
+        font-size: 14px;
+        font-weight: 550;
+    }
+
+    nav{
+        height: 17vh;
+    }
+
+    /* home page */
+    .ammo h1{
+        font-size: 35px;
+    }
+    
+    .ammo h3{
+        font-size: 25px;
+    }
+    
+    .home-content{
+        flex-direction: column;
+    }
+
+    .ammo p{
+        font-size: 15px;
+    }
+
+    .slider h5{
+        font-size: 35px;
+    }
+
+    .restaurant-content{
+        flex-direction: column;
+    }
+
+    .restaurant img{
+        width: 70%;
+        height: auto;
+    }
+
+    /* restaurant row */
+    .restaurantammo h3{
+        font-size: 25px;
+    }
+    
+    .restaurantammo p{
+    
+        font-size: 15px;
+    }
+    
+    .eventcontent1{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 8%;
+    }
+
+    /*hotel-branch */
+    .branch-content h5{
+        margin-top: 6%;
+        font-size: 30px;
+    }  
+
+    .branch-content p{
+        font-size: 16px;
+    }
+
+    .roomcontent p{
+        font-size: 16px;
+    }
+    
+
+    /*hotel-restaurant */
+    .restaurantpg-content h5{
+        margin-top: 6%;
+        font-size: 30px;
+    }  
+
+    .restaurantpg-content p{
+        font-size: 16px;
+    }
+
+    .restaurantcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurantcontent p{
+        font-size: 16px;
+    }
+    
+
+    .restauranttypes h2{
+        font-size: 30px;
+    }
+    
+    .restaurantcontent img{
+        width: 80%;
+        height: auto;
+    }
+
+    .eventbtn{
+        font-size: 14px;
+    }
+
+    /*hotel-adventures */
+    .adventures-content h5{
+        margin-top: 6%;
+        font-size: 30px;
+    }  
+
+    .adventures-content p{
+        font-size: 16px;
+    }
+
+    /*footer*/
+    footer{
+        height: 40vh;
+        
+    }
+
+    .footer-content h6{
+        font-size: 14px;
+        color:#ffffff;
+    }
+    
+    .footer-content p{
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 708px) {
+    .logo{
+        padding-left: 13px;
+    }
+    
+    .social-media a i{
+        font-size: 20px;
+        transform: rotate(-45deg);
+    }
+    
+    .social-media{
+        padding-right: 10px;
+        width: 150px;
+        height: 40px;
+    }
+
+    nav a{
+        font-size: 12px;
+        font-weight: 550;
+        text-align: center;
+        align-items: center;
+    }
+
+    nav{
+        height: 35vh;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        animation: colorChange 10s infinite; /* Apply the animation */ 
+       
+    }
+
+    /* home */
+    .home{
+        padding-top: 35vh;
+    }
+
+    /* hotel-branch */
+    .branch{
+        padding-top: 35vh;
+        margin-bottom: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .branch-content h5{
+        margin-top: 6%;
+        font-size: 22px;
+    }  
+
+    .branch-content p{
+        font-size: 15px;
+    }
+
+    .roomcontent p{
+        font-size: 15px;
+    }
+    
+    /* hotel restaurant */
+    .restaurantpg{
+        padding-top: 35vh;
+        margin-bottom: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .restaurantpg-content p{
+        font-size: 15px;
+    }
+
+    .restaurantpg-content h5{
+        margin-top: 1%;
+    }
+
+    .restaurantcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurantcontent p{
+        font-size: 15px;
+    }
+    .restauranttypes h2{
+        font-size: 22px;
+    }
+    
+    .restaurantcontent img{
+        width: 80%;
+        height: auto;
+    }
+
+    .eventpagescontent{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .eventpagescontent p{
+        font-size: 15px;
+    }
+
+    .eventbtn{
+        font-size: 15px;
+    }
+
+    /* hotel adventures */
+    .adventures{
+        padding-top: 35vh;
+        margin-bottom: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .adventures-content h5{
+        margin-top: 6%;
+        font-size: 30px;
+    }  
+
+    .adventures-content p{
+        font-size: 16px;
+    }
+
+    footer{
+        height: 40vh;
+        
+    }
+
+    .footer-content h6{
+        font-size: 14px;
+        color:#ffffff;
+    }
+    
+    .footer-content p{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    /* home */
+    .home{
+        padding-top: 35vh;
+    }
+
+    .ammo h1{
+        font-size: 26px;
+    }
+
+    .slider h5{
+        font-size: 26px;
+    }
+
+    .ammo h3{
+        font-size: 22px;
+    }
+
+    .ammo p{
+        font-size: 14px;
+    }
+
+    .restaurantammo h3{
+        font-size: 22px;
+    }
+
+    .restaurantammo p{
+        font-size: 14px;
+    }
+
+    .button{
+        font-size: 14px;
+    }
+    .events-content h5{
+        font-size: 26px;
+    }
+
+    .list-content h5{
+        font-size: 26px;
+    }
+
+    .box p{
+        font-size: 14px;
+    }
+
+    .box li{
+        font-size: 14px;
+    }
+
+    /* contain */
+    .contain{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    .button2{
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 2% 30%;
+    }
+    
+
+    .pic{
+        border-radius: 6px;
+        width: 350px;
+        height: 350px;
+    }
+
+    
+
+    /* hotel-branch */
+    .restaurantpg-content li{
+        color:#ffffff;
+        font-size: 11px;
+    }
+
+    .branch-content h5{
+        margin-top: 6%;
+        font-size: 26px;
+    }  
+
+    .branch-content p{
+        font-size: 14px;
+    }
+
+    .roomcontent h2{
+        font-size: 22px;
+    }
+    .roomcontent p{
+        font-size: 14px;
+    }
+    
+    /* hotel-restaurant */
+    .restaurantpg-content h5{
+        margin-top: 6%;
+        margin-bottom: 2%;
+        font-size: 26px;
+    }  
+
+    .restaurantpg-content p{
+        font-size: 14px;
+    }
+
+    .restaurantpg-content li{
+        color:#ffffff;
+        font-size: 11px;
+    }
+
+    .restaurantcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurantcontent p{
+        font-size: 14px;
+    }
+    .restauranttypes h2{
+        font-size: 22px;
+    }
+    
+    .restaurantcontent img{
+        width: 80%;
+        height: auto;
+    }
+
+    .eventpage1 h2{
+        font-size: 22px;
+    }
+
+    .eventpage1 h5{
+        font-size: 30px;
+    }
+
+    .eventpagescontent p{
+        font-size: 14px;
+    }
+
+    .eventbtn{
+        font-size: 14px;
+    }
+
+    .event h2{
+        font-size: 22px;
+    }
+
+    .event p{
+        font-size: 14px;
+    }
+
+    /*hotel-adventures */
+    .adventures-content h5{
+        margin-top: 6%;
+        margin-bottom: 2%;
+        font-size: 26px;
+    }  
+
+    .adventures-content p{
+        font-size: 14px;
+    }
+
+    .adventures-content li{
+        color:#ffffff;
+        font-size: 11px;
+    }
+
+    .adventures-content h5{
+        margin-top: 6%;
+        font-size: 22px;
+    }  
+
+    .adventures-content p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    /* home */
+    .home{
+        padding-top: 35vh;
+    }
+
+    .ammo h1{
+        font-size: 26px;
+    }
+
+    .ammo h3{
+        font-size: 22px;
+    }
+
+    .ammo p{
+        font-size: 14px;
+    }
+
+    .restaurant-content{
+        gap: 2rem;
+    }
+    .restaurantammo h3{
+        font-size: 22px;
+    }
+
+    .restaurantammo p{
+        font-size: 14px;
+    }
+
+    .list-content h5{
+        font-size: 26px;
+        margin-top: 5%;
+    }
+
+    .box p{
+        font-size: 14px;
+    }
+
+    .box li{
+        font-size: 14px;
+    }
+
+
+     /* contain */
+     .contain{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button2{
+        display: inline-block;
+        padding: 8px 12px;
+    }
+    
+    .pic{
+        border-radius: 6px;
+        width: 250px;
+        height: 250px;
+    }
+    /*hotel-branch*/
+    .branch-content h5{
+        margin-top: 6%;
+        font-size: 26px;
+    }  
+
+    .branch-content p{
+        font-size: 12px;
+    }
+
+    .roomcontent h2{
+        font-size: 22px;
+    }
+    .roomcontent p{
+        font-size: 12px;
+    }
+
+    .events-content h5{
+        font-size: 26;
+    }
+
+    /*hotel-restaurant*/
+    .restaurantpg-content h5{
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 26px;
+    }  
+
+    .restaurantpg-content p{
+        font-size: 12px;
+    }
+
+    .restaurantcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurantcontent p{
+        font-size: 12px;
+    }
+    .restauranttypes h2{
+        font-size: 22px;
+    }
+    
+    .restaurantcontent img{
+        width: 80%;
+        height: auto;
+    }
+
+    .eventpage1 h2{
+        font-size: 22px;
+    }
+
+    .eventpage1 h5{
+        font-size: 26px;
+    }
+
+    .eventpagescontent p{
+        font-size: 12px;
+    }
+
+    .eventbtn{
+        font-size: 12px;
+    }
+    
+    /*hotel-adventures*/
+    .adventures-content h5{
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 26px;
+    }  
+
+    .adventures-content p{
+        font-size: 12px;
+    }
+
+    .footer-content li{
+        color:#ffffff;
+        font-size: 11px;
+    }
+
+    .adventures-content h5{
+        margin-top: 6%;
+        font-size: 26px;
+    }  
+
+    .adventures-content p{
+        font-size: 12px;
+    }
+
+    .adventure1content p{
+        font-size: 12px;
+    }
+
+}
+
+/*Book form mobile view*/    
+@media screen and (max-width: 1100px){
+    .incol{
+        flex-wrap: wrap;
+    }
+    .checkcolumn{
+    flex-wrap: wrap;
+    }
+    .selcol{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 708px) {
+    .book{
+        padding-top: 35vh;
+    }
+  }
+
+  @media (max-width: 615px) {
+    .box{
+        margin-right: 8%;
+    }
+  }
+
+/* Style for form container */
+.bookdetails {
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.bookdetails h2,
+.adventureDetails h2 {
+    color: #ee4908;
+    font-size: 50px;
+    text-shadow: 0 0 5px #bab8b8;
+    margin-bottom: 5%;
+}
+
+/* Style for fieldsets */
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for input elements */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"]{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Hide default checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style for checkbox buttons */
+.roomButton {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: .4s
+}
+
+.guideButton {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: .4s
+}
+
+.extraButton {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: .4s
+}
+
+
+
+.extraButton:hover{
+    background: #ff6a00;
+    color:#000000;
+}
+
+/* Style for the active state */
+.extraButton.active {
+    background: #ff6a00;
+    color: #000000;
+}
+
+.roomButton:hover{
+    background: #ff6a00;
+    color:#000000;
+}
+
+/* Style for the active state */
+.roomButton.active {
+    background: #ff6a00;
+    color: #000000;
+}
+
+.guideButton:hover{
+    background: #ff6a00;
+    color:#000000;
+}
+
+/* Style for the active state */
+.guideButton.active {
+    background: #ff6a00;
+    color: #000000;
+}
+
+
+/* Style for checked state of checkbox buttons */
+input[type="checkbox"]:checked + .roomButton {
+    background-color: #ff6a00;
+    color: black;
+}
+
+/* Style for submit button */
+#detailBook,
+#adventureBook {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    transition: .4s
+}
+
+#detailBook:hover,
+#adventureBook:hover {
+    background-color: #ff6a00;
+}
+
+/* Style for cost display and booking details */
+#costDisplay,
+#bookingDetails,
+#singleDisplay,
+#adventureCostDisplay {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Style for adventure details section */
+.adventureDetails {
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for submit button */
+#adevntureBook {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#adevntureBook:hover {
+    background-color: #ff6a00;
+}
+
+/* Style for output section */
+.output {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.detailsContainer {
+    display: flex;
+    width: 100%;
+}
+
+.detailsBox {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}

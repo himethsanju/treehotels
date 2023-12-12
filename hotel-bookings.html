@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <title>Treehotel</title>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo"><img src='pictures/treehotlogo.png' width="100px" height="100px"></a>
+        <a href="new webpage.html">Home</a>
+        <a href="hotel-branches.html">Branches</a>
+        <a href="hotel-adventures.html">Adventures</a>
+        <a href="hotel-restaurant.html">Restaurant</a>
+        <a href="#" class="active">Bookings</a>
+        <section class="social-media">
+            <a href="https://twitter.com/i/flow/login" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+            <a href="https://about.meta.com/?utm_source=about.facebook.com&utm_medium=redirect" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/explore/tags/treehotel/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        </section>
+    </nav>
+
+    <!-- booking page home -->
+    <section class="bookingcontainer">
+        <section class="left-side">
+            <section class="book">
+                <section class="bookcontainer">
+                    <section class="bookpg-content">
+                        <h1>Booking page and Reservations</h1>
+                        <p>Book your stay and join us in your wonderful journey at Treehotel. "Discover enchanting treetop escapes at Treehotel! Nestled in Sweden's picturesque wilderness, our unique accommodations blend seamlessly with nature, offering an unforgettable stay high among the trees."</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+<!-- Booking details -->
+    <section class = "bookdetails">
+        <h2> Booking Details </h2>
+
+        <!-- Booking form input fields -->
+        <form id = "bookingForm">
+
+            <!-- full name -->
+            <fieldset> 
+                <label for = "fullName"> Full Name </label>
+                <input type = "text" id = "fullName" name = "details"  required>
+            </fieldset>
+
+            <!-- email -->
+            <fieldset> 
+                <label for = "fullEmail"> Email </label>
+                <input type = "email" id = "fullEmail" name = "details"  required>
+            </fieldset>
+
+            <!-- Room types -->
+            <fieldset>
+                <legend>Room Type</legend>
+                <p>
+                    <!-- Single room -->
+                    <label for="singleRoom" class="roomButton" onchange="calculateSingleRoom()">
+                        <input type="checkbox" id="singleRoom" name="details" value="singleRoom" class="roomType">
+                        Single Room
+                    </label>
+                    
+                    <!-- Double room -->
+                    <label for="doubleRoom" class="roomButton" onchange="calculateDoubleRoom()">
+                        <input type="checkbox" id="doubleRoom" name="details" value="doubleRoom" class="roomType">
+                        Double Room
+                    </label>
+                    
+                    <!-- Triple room -->
+                    <label for="tripleRoom" class="roomButton" onchange="calculateTripleRoom()">
+                        <input type="checkbox" id="tripleRoom" name="details" value="tripleRoom" class="roomType">
+                        Triple Room
+                    </label>
+                </p>
+            </fieldset>
+            
+            
+            <fieldset>
+                <p>
+                <!-- Number of adults -->
+                <label for = "noAdults"> No. of Adults </label>
+                <input type = "number" id = "noAdults" name = "details" value = "noAdults" min="1" value = "1" required>
+
+                <!-- Number of children -->
+                <label for = "noChildren"> No. of Children </label>
+                <input type = "number" id = "noChildren" name = "details" value = "noChildren" min="0" value = "1">
+
+                <!-- extra meal for children above 5yrs -->
+                <label for="aboveFive">Children above 5 years</label>
+                <input type="number" id="aboveFive" name="details" value = "aboveChildren" min="0" value="1">
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <p>
+                <!-- check in date -->
+                <label for = "checkIn"> Check in Date </label>
+                <input type = "date" id = "checkIn" name = "details" value = "checkIn" required>
+
+                <!-- check out date -->
+                <label for = "checkOut"> Check out Date </label>
+                <input type = "date" id = "checkOut" name = "details" value = "checkOut" required>
+                </p>
+            </fieldset>
+
+            <!-- Extra requirements -->
+            <legend> Extra Requirements </legend>
+            <fieldset>
+
+                <!-- Wifi network 
+                -->
+                <label for = "wifi" class = "extraButton"> 
+                <input type = "checkbox" id = "wifi" name = "extra" value = "wifi" class = "extraRequire"> WiFi
+                </label>  
+            </fieldset>
+
+            <!-- View types -->
+            <legend> views </legend>
+            <fieldset> 
+                <p>
+                
+                <!-- Pool view -->
+                <label for = "poolView" class = "extraButton"> 
+                <input type = "checkbox" id = "poolView" name = "views" value = "poolView" class = "extraRequire"> Pool View 
+                </label>
+
+                <!-- Garden view -->
+                <label for = "gardenView" class = "extraButton">
+                <input type = "checkbox" id = "gardenView" name = "views" value = "gardenView" class = "extraRequire"> Garden View
+                </label>
+                </p>
+            </fieldset>
+
+            <!-- add to order -->
+            <p> 
+                <button type = "submit" id = "detailBook"> Book Now </button>
+            </p> 
+        </form>
+
+        <!-- Current booking output -->
+        <section class="output">
+            <div class = "detailsContainer"> 
+            <div id="outputDetails" class = "detailsBox">
+                    
+                <!-- current booking details -->
+                <p id = "bookingDetails"> Current Booking: </p> <br>
+
+                <p id="fullNameDisplay"> Full Name: </p>
+                <p id="fullEmailDisplay"> Email: </p>
+                <p id="noOfAdultsDisplay"> No of Adults: </p>
+                <p id="noOfChildrenDisplay"> No of Children: </p>
+                <p id="singleRoomCostDisplay"> Single Room Cost: $0</p>
+                <p id="doubleRoomCostDisplay"> Double Room Cost: $0</p>
+                <p id="tripleRoomCostDisplay"> Triple Room Cost: $0</p>
+                <p id="checkInDisplay">Check In date: </p>
+                <p id="checkOutDisplay">Check Out date: </p>    
+                <p id="childrenCostDisplay"> Extra meal for Kids above 5yrs: $0</p>
+                <p id="extraDisplay"> Extra Requirements: </p> 
+
+                <!-- the total cost display -->
+                <p id="totalCostDisplay">Current Booking Cost: $0</p>
+            </div>
+
+            </div>
+    </section>
+    </section>
+
+
+    <!-- adventure details -->
+    <section class = "adventureDetails">
+        <h2> Adventure Details </h2>
+
+        <!-- adventure details form -->
+        <form id = "adventureForm">
+
+            <!-- local guests-->
+            <legend> Local Guests </legend>
+            <fieldset>
+                <p> 
+                
+                <!-- number of local adults -->
+                <label for = "locAdults"> No. of Adults: </label>
+                <input type = "number" id = "locAdults" name = "Local Guests" value = "locAdults" min="1" value = "1">  
+
+                <!-- hours of diving adults-->
+                <label for = "adultHours"> Hourly Duration cost: </label>
+                <input type = "number" id = "adultHours" name = "Local Guests" value = "adultHours" min="1" value = "1">  
+                </p>
+
+                <!-- number of local children -->
+                <p> 
+                <label for = "locChildren"> No. of Children (above 5yrs): </label>
+                <input type = "number" id = "locChildren" name = "Local Guests" value = "locChildren" min="1" value = "1">  
+
+                <!-- hours of diving children -->
+                <label for = "childHours"> Hourly duration cost: </label>
+                <input type = "number" id = "childHours" name = "Local Guests" value = "childHours" min="1" value = "1"> 
+                </p>
+            </fieldset>
+
+            <!-- foreign guests -->
+            <legend> Foreign Guests </legend>
+            <fieldset>
+                <p> 
+
+                <!-- number of foreign adults -->
+                <label for = "forAdults"> No. of Adults: </label>
+                <input type = "number" id = "forAdults" name = "Foreign Guests" value = "forAdults" min="1" value = "1">  
+
+                <!-- hours of diving adults -->
+                <label for = "forAdultHours"> Hourly duration cost: </label>
+                <input type = "number" id = "forAdultHours" name = "Foreign Guests" value = "forAdultHours" min="1" value = "1"> 
+                </p>
+
+                <p> 
+
+                <!-- number of foreign children-->
+                <label for = "forChildren"> No. of Children (above 5yrs) </label>
+                <input type = "number" id = "forChildren" name = "Foreign Guests" value = "forChildren" min="1" value = "1">
+                
+                <!-- hours of diving children -->
+                <label for = "forChildHours"> Hourly duration cost:  </label>
+                <input type = "number" id = "forChildHours" name = "Foreign Guests" value = "forChildHours" min="1" value = "1">
+                </p>
+            </fieldset>
+
+            <!-- guide prices -->
+            <legend> Guide </legend>
+            <fieldset>
+                <p>
+
+                <!-- adult guide -->
+                <label for = "adultGuide" class = "guideButton"> 
+                <input type = "checkbox" id = "adultGuide" name = "Guide" value = "adultGuide"> Adult Guide 
+                </label>
+
+                <!-- children guide -->
+                <label for = "childrenGuide" class = "guideButton">
+                <input type = "checkbox" id = "childrenGuide" name = "Guide" value = "childrenGuide" > Children Guide
+                </label>
+                </p>
+            </fieldset>
+
+            <!-- add to order -->
+            <p> 
+                <button type = "submit" id = "adventureBook"> Book Adventure </button>
+            </p> 
+
+            <!-- current adventure booking output -->
+    <section class="output">
+            <div class = "detailsContainer"> 
+            <div id="outputDetails" class = "detailsBox">
+        
+        <!-- local guests-->
+        <legend> Local Guest Details:</legend> <br>
+        <p id = "adultNumber"> No. of Adults: </p>
+        <p id = "adultNoCost"> Cost for Adults per (1hr): </p>
+        <p id = "childrenNumber"> No. of Children (above 5yrs): </p>
+        <p id = "childrenNoCost"> Cost for childern: </p> <br>
+
+        <!-- foreign guests -->
+        <legend> Foreign Guest Details:</legend> <br>
+        <p id = "foreignNumber"> No. of Adults: </p>
+        <p id = "foreignNoAdultCost"> Cost for Adults per (1hr): </p>
+        <p id = "foreignChildNumber"> No. of Childern (above 5yrs): </p>
+        <p id = "foreignChildrenNoCost"> Cost for childern: </p> <br>
+
+        <!-- the guide costs -->
+        <legend> Guide Costs: </legend> <br>
+        <p id = "adultGuideCost"> Adult Guide Cost: $0</p>
+        <p id = "childrenGuideCost"> Children Guide Cost: $0</p>
+
+        <!-- total adventure costs-->
+        <p id="totalAdventureCost">Current Adventure Cost: $0</p>
+        </div>
+        </div>
+    
+    </section>
+    </form>       
+    </section>
+
+    <!-- javaScript link -->
+    <script src="./main.js"></script>
+
+    <!-- footer -->
+    <footer> 
+        <section class="footerimg"></section>
+        <section class="footer-content">
+            <h6>Contact</h6>
+            <p>Treehotel <br>
+            Edeforsväg 2 A <br>
+            961 78 Harads <br>
+            Sweden</p>
+            <ul>
+                <li>Phone: +46 (0)928-103 00</li>
+                <li>Email: booking@treehotel.se</li>
+            </ul>
+        </section>
+    </footer>
+    
+</body>
+
+</html>
